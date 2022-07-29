@@ -1,0 +1,99 @@
+<script src="js/loading/head.js" charset='utf-8'></script>
+<script src="js/loading/navbar.js" charset='utf-8'></script>
+
+<!-- 載入index所需之檔案 -->
+<script src="js/jquery.sliphover.min.js"></script>
+<script type="text/javascript" src="js/freewall.js"></script>
+<link rel="stylesheet" href="css/index.css">
+
+<div class="main column col-9">
+    <div class="block-container" id="container">
+        <a href="#">
+            <div class="brick">
+                <img src="img/p0.jpg" width="100%" title="this is the caption">
+                <div class="info back-blow">
+                    <h3>Freewall</h3>
+                </div>
+            </div>
+        </a>
+        <div class="brick">
+            <img src="img/p1.jpg" width="100%" title="this is the caption">
+            <div class="info back-blow">
+                <h3>Freewall</h3>
+
+            </div>
+        </div>
+        <div class="brick">
+            <img src="img/p2.jpg" width="100%" title="this is the caption">
+            <div class="info back-blow">
+                <h3>Freewall</h3>
+
+            </div>
+        </div>
+        <div class="brick">
+            <img src="img/p3.jpg" width="100%" title="this is the caption">
+            <div class="info back-blow">
+                <h3>Freewall</h3>
+
+            </div>
+        </div>
+        <div class="brick">
+            <img src="img/p4.jpg" width="100%" title="this is the caption">
+            <div class="info back-blow">
+                <h3>Freewall</h3>
+
+            </div>
+        </div>
+        <div class="brick">
+            <img src="img/p5.jpg" width="100%" title="this is the caption">
+            <div class="info back-blow">
+                <h3>Freewall</h3>
+
+            </div>
+        </div>
+        <div class="brick">
+            <img src="img/p6.jpg" width="100%" title="this is the caption">
+            <div class="info back-blow">
+                <h3>Freewall</h3>
+
+            </div>
+        </div>
+        <div class="brick">
+            <img src="img/p7.jpg" width="100%" title="this is the caption">
+            <div class="info back-blow">
+                <h3>Freewall</h3>
+
+            </div>
+        </div>
+        <div class="brick">
+            <img src="img/p8.jpg" width="100%" title="this is the caption">
+            <div class="info back-blow">
+                <h3>Freewall</h3>
+
+            </div>
+        </div>
+    </div>
+    <div class="loader"></div>
+</div>
+
+
+
+<script>
+    var wall = new freewall("#container");
+    wall.reset({
+        selector: '.brick',
+        animate: true,
+        cellW: 300,
+        cellH: 'auto',
+        onResize: function () {
+            wall.fitWidth();
+        }
+    });
+
+    wall.container.find('.brick img').load(function () {
+        wall.fitWidth();
+    });
+
+    $("#container").sliphover({ backgroundColor: 'rgba(	78, 131, 181, 0.9)' });
+</script>
+<script src="js/loading/footer.js" charset='utf-8'></script>

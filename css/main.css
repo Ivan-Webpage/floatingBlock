@@ -1,0 +1,257 @@
+* {box-sizing: border-box;}
+html {height: 100%;}
+img {width: 100%;}
+html, body, div, h1, h2, h3, h4, h5, h6, p, span {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  /* height: 100%; */
+  margin: 0;
+  font-size: 15px;
+  font-family: Microsoft JhengHei, DFKai-sb, Arial, '新細明體', sans-serif;
+}
+
+/* 標題樣式設定 */
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 10px 10px 10px;
+  letter-spacing: 3px;
+}
+
+h1 {font-size: 35px;}
+h2 {font-size: 25px;}
+h3 {font-size: 20px;}
+h4 {font-size: 18px;}
+h5 {font-size: 15px;}
+h6 {font-size: 13px;}
+
+p {
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 3px;
+}
+
+li {
+  list-style-type: none;
+  text-decoration: none;
+}
+li a{
+  text-decoration: none;
+  color: #4e83b5;
+  font-weight:bold;
+}
+/* 拉鍊樣式 */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #565656;
+} */
+
+/* 物件排版時使用 */
+.column {
+  float: right;
+  /* padding: 20px; */
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.col-12 {width: 100%;}
+.col-10 {width: 83.33%;}
+.col-9 {width: 75%;}
+.col-8 {width: 66.66%;}
+.col-6 {width: 50%;}
+.col-4 {width: 33.3%;}
+.col-3 {width: 25%;}
+.col-2 {width: 16.66%;}
+.col-1 {width: 8.33%;}
+
+.row {
+  width: 100%;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 背景顏色使用 */
+.back-white, body, .overlay {background-color: #f0f4f9;} /* 白色 */
+.back-blue, .dropdown-container,::-webkit-scrollbar-thumb {background-color: #4e83b5;} /* 藍色 */
+.back-gray, ::-webkit-scrollbar-thumb:hover {background-color: #565656;} /* 深灰色 */
+.back-light-gray, ::-webkit-scrollbar-thumb:hover {background-color: #cccecf;} /* 淺灰色 */
+.back-blow {background-color: #cca784;}
+
+/* 文字顏色使用 */
+.text-white {color: #f0f4f9;} /* 白色 */
+.text-black {color: #111;} /* 黑色 */
+.text-blue,.overlay a, .dropdown-btn {color: #4e83b5;} /* 藍色 */
+.text-gray,.overlay a:hover, .dropdown-btn:hover {color: #818181;} /* 灰色 */
+
+
+.overlay {
+  align-content: start;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  width: 100%;
+}
+
+.overlay a,
+.dropdown-btn {
+  padding: 6px 8px 6px 8px;
+  text-decoration: none;
+  font-size: 20px;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.overlay-content a {
+  display: block;
+}
+
+.overlay .closebtn {
+  top: 20px;
+  font-size: 40px;
+}
+
+.main {
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.dropdown-container {
+  display: none;
+  padding-left: 8px;
+  transition: .5s ease;
+}
+
+.dropdown-container a {
+  font-size: 15px;
+  color: white;
+}
+
+.navCntrl {
+  position: fixed;
+  z-index: 99999;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  display: none;
+}
+
+.closebtn {
+  display: none;
+  text-align: left;
+}
+
+.line-style {
+  border: 0;
+  height: 1px;
+  width: 90%;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+
+.social-icon a {
+  width: auto;
+}
+
+
+
+#goTop {
+  position: fixed;
+  width: 100px;
+  /* float: right; */
+  bottom: 20px;
+  right: -100px;
+  z-index: 9999;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  /* border-radius: 4px; */
+  transition: .5s ease;
+}
+
+#goTop:hover {
+  background-color: #555;
+}
+
+.copyright {
+  text-align: center;
+  padding: 8px;
+}
+
+.loader {
+  border: 6px solid #999; /* Light grey */
+  border-top: 6px solid #4e83b5; /* Blue */
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 定義小螢幕 */
+@media screen and (max-width: 800px) {
+  .main {
+    width: 66.66%;
+  }
+  .overlay {
+    width: 33.3%;
+  }
+  .overlay a, .dropdown-btn {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  img {
+    /* width: 50%; */
+  }
+  .main {
+    margin-left: 0px;
+  }
+  .overlay {
+    padding-top: 15px;
+    width: 0%;
+  }
+
+  .overlay a {
+    font-size: 18px;
+  }
+
+  .navCntrl, .closebtn {
+    display: block;
+  }
+  .column,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
