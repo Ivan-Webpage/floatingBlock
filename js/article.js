@@ -49,7 +49,7 @@ xhr.onload = function () {
     var bodycontent = document.createElement("div");
     bodycontent.setAttribute("class", "body-content");
 
-    getkey = Object.keys(data.description)
+    getkey = Object.keys(data.paragraph)
     for (var i = 0; i < getkey.length; i++) {
         var objbtm = document.createElement("button");
         objbtm.setAttribute("class", 'accordion back-blue text-white');
@@ -60,7 +60,7 @@ xhr.onload = function () {
         objh2.innerHTML = i + '. ' + getkey[i];
 
         //----- 內文處理 -----
-        var getArticle = data.description[getkey[i]]; // 先抓到內文
+        var getArticle = data.paragraph[getkey[i]]; // 先抓到內文
         getArticle = '<p>　　' + getArticle + '</p>'
         getArticle = getArticle.replace('<br>', '</p><br></p>') // 所有的換行都分開標籤
         // 圖片替換
@@ -68,7 +68,12 @@ xhr.onload = function () {
         for (var j = 0; j < allMedia.length; j++) {
             getArticle = getArticle.replace(
                 '%media' + allMedia[j].name + '%',
-                '</p><img id=' + data.media[j].name + ' src=' + allMedia[j].location + ' alt=' + allMedia[j].alt + ' class="article-img" onclick=bigImg("' + allMedia[j].location + '","' + allMedia[j].alt + '")></img><br><p>　　'
+                '</p><img id=' + data.media[j].name + 
+                ' src=' + allMedia[j].location + 
+                ' alt=' + allMedia[j].alt + 
+                ' class="article-img" onclick=bigImg("' + allMedia[j].location + '","' + allMedia[j].alt + 
+                '")></img><figcaption class="article-img-alt text-gray">圖'+ (j+1) +
+                '. ' + allMedia[j].alt +'</figcaption><br><p>　　'
             );
         };
         // 程式碼替換
