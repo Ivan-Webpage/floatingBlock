@@ -68,12 +68,12 @@ xhr.onload = function () {
         for (var j = 0; j < allMedia.length; j++) {
             getArticle = getArticle.replace(
                 '%media' + allMedia[j].name + '%',
-                '</p><img id=' + data.media[j].name + 
-                ' src=' + allMedia[j].location + 
-                ' alt=' + allMedia[j].alt + 
-                ' class="article-img" onclick=bigImg("' + allMedia[j].location + '","' + allMedia[j].alt + 
-                '")></img><figcaption class="article-img-alt text-gray">圖'+ (j+1) +
-                '. ' + allMedia[j].alt +'</figcaption><br><p>　　'
+                '</p><img id=' + data.media[j].name +
+                ' src=' + allMedia[j].location +
+                ' alt=' + allMedia[j].alt +
+                ' class="article-img" onclick=bigImg("' + allMedia[j].location + '","' + allMedia[j].alt +
+                '")></img><figcaption class="article-img-alt text-gray">圖' + (j + 1) +
+                '. ' + allMedia[j].alt + '</figcaption><br><p>　　'
             );
         };
         // 程式碼替換
@@ -88,8 +88,22 @@ xhr.onload = function () {
         for (var j = 0; j < allQuote.length; j++) {
             // 準備引文內容
             var qut = '</p><ul>'
+            var theType = ''
+            switch (allQuote[j].type) {
+                case 'list':
+                    theType = 'list-style-type:square;';
+                    break;
+                case 'emphasize':
+                    theType = 'color:#4e83b5; font-weight:bold; font-size:25px;';
+                    break;
+                case 'number':
+                    theType = 'list-style-type:decimal;';
+                    break;
+                default:
+                    console('Json資料有誤');
+            }
             for (var k = 0; k < allQuote[j].content.length; k++) {
-                qut = qut + '<li>' + allQuote[j].content[k] + '</li>';
+                qut = qut + '<li style="'+theType+'">' + allQuote[j].content[k] + '</li>';
             };
             qut = qut + '</ul><p>　　';
 

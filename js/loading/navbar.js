@@ -13,37 +13,28 @@ thevar ='\
             <a href="#about">首頁</a>\
             <button class="dropdown-btn">Python 教學影片<i class="fa fa-caret-down"></i></button>\
             <div class="dropdown-container">\
-                <a href="#">Python 教學影片</a>\
-                <a href="#">Line Bot 聊天機器人</a>\
-                <a href="#">行銷人轉職爬蟲王實戰｜5大社群＋2大電商</a>\
-                <a href="#">Telegram Bot聊天機器人</a>\
+                <a href="https://marketingliveincode.com/?page_id=270">Python 教學影片</a>\
+                <a href="https://marketingliveincode.com/?page_id=2532">Line Bot 聊天機器人</a>\
+                <a href="https://marketingliveincode.com/?page_id=4512">行銷人轉職爬蟲王實戰｜5大社群＋2大電商</a>\
+                <a href="https://marketingliveincode.com/?page_id=2648">Telegram Bot聊天機器人</a>\
             </div>\
-            <button class="dropdown-btn">行銷實用工具<i class="fa fa-caret-down"></i></button>\
-            <div class="dropdown-container">\
-                <a href="#">實用工具</a>\
-            </div>\
-            <button class="dropdown-btn">數據分析實戰<i class="fa fa-caret-down"></i></button>\
-            <div class="dropdown-container">\
-                <a href="#">實用工具</a>\
-            </div>\
-            <button class="dropdown-btn">程式金融<i class="fa fa-caret-down"></i></button>\
-            <div class="dropdown-container">\
-                <a href="#">實用工具</a>\
-            </div>\
+            <a href="https://marketingliveincode.com/?page_id=5101">行銷實用工具</a>\
+            <a href="https://marketingliveincode.com/?page_id=5109">數據分析實戰</a>\
+            <a href="#">程式金融</a>\
             <button class="dropdown-btn">課程筆記<i class="fa fa-caret-down"></i></button>\
             <div class="dropdown-container">\
-                <a href="#">實用工具</a>\
+                <a href="https://marketingliveincode.com/?page_id=5114">實用工具</a>\
             </div>\
-            <a href="#contact">關於Ivan</a>\
+            <a href="https://marketingliveincode.com/?page_id=5">關於Ivan</a>\
         </div>\
         <hr class="line-style" />\
 \
         <div class="row">\
             <div class="column col-12 social-icon">\
-                <a href="#" class="fa fa-facebook"></a>\
-                <a href="#" class="fa fa-google"></a>\
-                <a href="#" class="fa fa-youtube"></a>\
-                <a href="#" class="fa fa-instagram"></a>\
+                <a href="https://www.facebook.com/marketingliveincode" class="fa fa-facebook"></a>\
+                <a href="mail:ivanyang0606@gmail.com" class="fa fa-google"></a>\
+                <a href="https://www.youtube.com/channel/UCfBjDDjwsgGXcj8cdDqWX3A" class="fa fa-youtube"></a>\
+                <a href="https://www.instagram.com/ivan____yang" class="fa fa-instagram"></a>\
             </div>\
         </div>\
 \
